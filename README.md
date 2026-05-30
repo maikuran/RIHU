@@ -1,4 +1,5 @@
 # RIHU
+live at https://maikuran.github.io/RIHU/
 Revolution Idle: Hyperoperation UP
 
 Inspired by Revolution Idle.<br>
