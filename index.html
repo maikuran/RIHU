@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>RIHU - Revolution Idle: Hyperoperation UP</title>
+        <title>りふ - れぼりゅーしょんあいどる：はいぱーおぺれーしょんあっぷ</title>
         <link rel="stylesheet" type="text/css" href="styling/looks.css">
         <meta charset="UTF-8">
         <style>
@@ -179,42 +179,42 @@
     </head>
 
     <body>
-        <!-- トップセクション: ポイント表示、リセット機能 -->
+        <!-- とっぷせくしょん: ぽいんとひょうじ、りせっときのう -->
         <div id="topSection">
-            <h1>RIHU - Revolution Idle: Hyperoperation UP</h1>
+            <h1>りふ - れぼりゅーしょんあいどる：はいぱーおぺれーしょんあっぷ</h1>
             
             <div id="pointsDisplay">
-                Points: <span id="points">0</span>
+                ぽいんと: <span id="points">0</span>
             </div>
             
             <div id="genDisplay">
-                Generation: <span id="pointGen">0</span> /sec
+                せいせい: <span id="pointGen">0</span> /びょう
             </div>
             
-            <!-- Prestige情報 -->
+            <!-- ぷれすてぃじじょうほう -->
             <div id="prestige-info">
-                Prestige: <span id="prestigeCount">0</span> (×<span id="prestigeMultiplier">1.00</span>)
+                ぷれすてぃじ: <span id="prestigeCount">0</span> (×<span id="prestigeMultiplier">1.00</span>)
             </div>
             
-            <!-- Infinity情報 -->
+            <!-- いんふぃにてぃじょうほう -->
             <div id="infinity-info">
-                Infinity: <span id="infinityCount">0</span>
+                いんふぃにてぃ: <span id="infinityCount">0</span>
             </div>
             
-            <!-- Eternity情報 -->
+            <!-- いたにてぃじょうほう -->
             <div id="eternity-info">
-                Eternity: <span id="eternityCount">0</span>
+                いたにてぃ: <span id="eternityCount">0</span>
             </div>
             
-            <!-- リセットボタン -->
+            <!-- りせっとぼたん -->
             <div class="button-row">
-                <button class="reset-btn" id="prestigeBtn" onclick="doPrestige()">Prestige</button>
-                <button class="reset-btn" id="infinityBtn" onclick="manualInfinity()">Infinity (Auto)</button>
-                <button class="reset-btn" id="eternityBtn" onclick="manualEternity()">Eternity (Auto)</button>
+                <button class="reset-btn" id="prestigeBtn" onclick="doPrestige()">ぷれすてぃじ</button>
+                <button class="reset-btn" id="infinityBtn" onclick="manualInfinity()">いんふぃにてぃ (じどう)</button>
+                <button class="reset-btn" id="eternityBtn" onclick="manualEternity()">いたにてぃ (じどう)</button>
             </div>
         </div>
         
-        <!-- メインコンテンツ: リング選択とキャンバス -->
+        <!-- めいんこんてんつ: りんぐせんたくときゃんばす -->
         <div id="mainTab">
             <div class="main-content">
                 <div id="lapUpgrades"></div>
@@ -223,19 +223,19 @@
                 </div>
             </div>
             
-            <!-- 数式表示 -->
+            <!-- すうしきひょうじ -->
             <span id="formula"></span>
         </div>
 
-        <!-- LIBRARIES -->
+        <!-- らいぶらり -->
         <script src="js/lib/ExpantaNum.js"></script>
 
-        <!-- CORE -->
+        <!-- こあ -->
         <script src="js/core/main.js"></script>
         
-        <!-- UI更新用追加スクリプト -->
+        <!-- ゆーあい こうしん よう ついかすくりぷと -->
         <script>
-            // 画面更新関数を拡張
+            // がめんこうしん かんすう を かくちょう
             const originalUpdate = update
             function updateWithUI() {
                 originalUpdate()
@@ -245,7 +245,7 @@
                 document.getElementById("eternityCount").innerHTML = player.eternity
             }
             
-            // setIntervalを上書き
+            // setInterval を うわがき
             const originalInterval = window.setInterval
             window.setInterval = function(callback, delay) {
                 return originalInterval(function() {
